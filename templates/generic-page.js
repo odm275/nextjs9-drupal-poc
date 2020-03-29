@@ -8,22 +8,17 @@ const SPECIALS_QUERY = gql`
     route(path: $path) {
       ... on EntityCanonicalUrl {
         nodeContext {
-          entityBundle
-          ...Special
+          ...Page
         }
       }
     }
   }
 
-  fragment Special on NodeSpecialsPage {
+  fragment Page on NodePage {
     title
     body {
       value
     }
-    fieldMainImage {
-      url
-    }
-    fieldSectionTitle
   }
 `;
 

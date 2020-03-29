@@ -10,7 +10,6 @@ const PAGE_QUERY = gql`
     route(path: $path) {
       ... on EntityCanonicalUrl {
         nodeContext {
-          entityBundle
           ...Page
         }
       }
