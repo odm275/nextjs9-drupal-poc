@@ -45,6 +45,7 @@ const Page = ({ path }) => {
 
   return (
     <div>
+      <p>specials page tho</p>
       <h1>{title}</h1>
       <img src={fieldMainImage.url} />
       <h2>{fieldSectionTitle}</h2>

@@ -55,6 +55,7 @@ const ProductPage = ({ path }) => {
 
   return (
     <div>
+      <p>Product page tho</p>
       <h1>{title}</h1>
       <img src={fieldMainImage.url} width="400" height="600" />
       <h3>Price</h3>
