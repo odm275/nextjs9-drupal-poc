@@ -23,16 +23,25 @@ const SPECIALS_QUERY = gql`
 `;
 
 const Page = ({ path }) => {
-  console.log("page tempalte");
   const { data, loading, error } = useQuery(SPECIALS_QUERY, {
     variables: { path: path }
   });
-  if (loading) return <div />;
-  console.log("data", data);
+  if (loading)
+    return (
+      <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" />
+    );
+
+  const {
+    route: {
+      nodeContext: { title, body }
+    }
+  } = data;
+  console.log("data", body);
 
   return (
     <div>
-      <h1>generic page</h1>
+      <h1>{title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: body.value }} />
     </div>
   );
 };
