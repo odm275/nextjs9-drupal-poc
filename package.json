@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev && yarn build-fragment",
+    "dev": "yarn build-fragment && next dev",
     "build": "next build",
     "start": "next start",
     "build-fragment": "node lib/schemaQuery.js"
@@ -12,7 +12,9 @@
     "@apollo/react-hooks": "^3.1.2",
     "@apollo/react-ssr": "^3.1.2",
     "apollo-boost": "^0.4.4",
-    "apollo-cache-inmemory": "^1.6.3",
+    "apollo-cache-inmemory": "^1.6.5",
+    "apollo-client": "^2.6.8",
+    "apollo-link-http": "^1.5.16",
     "apollo-server-micro": "^2.9.6",
     "graphql-tag": "^2.10.1",
     "isomorphic-unfetch": "^3.0.0",

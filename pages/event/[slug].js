@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { withApollo } from "../../lib/apollo";
 
 import Layout from "../../components/Layout";
 
@@ -14,4 +15,4 @@ const Event = () => {
   );
 };
 
-export default Event;
+export default withApollo(Event);
